@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
-	<link rel="shortcut icon" href="./assets/favi.png">
+    <link rel="shortcut icon" href="./assets/favi.png" />
     <link rel="stylesheet" href="./style.css" />
 
-	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -20,13 +23,15 @@
     <div class="hero">
       <nav>
         <h2 class="logo">Portfo<span>lio</span></h2>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Contect Us</a></li>
+        <ul id="sidemenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contect">Contect Us</a></li>
+          <i class="xxl ri-close-line" onclick="closemenu()"></i>
         </ul>
+        <i class="xxl ri-menu-2-line" onclick="openmenu()"></i>
         <a href="#" class="btn">Hire Me</a>
       </nav>
       <div class="content">
@@ -46,33 +51,39 @@
         </div>
       </div>
     </div>
+    <hr />
     <!-- about section down  -->
     <section class="about">
-      <div class="main">
-        <img src="./assets/main.jpeg" alt="" />
-        <div class="about-text">
-          <h2>About Me</h2>
-          <h5>Web Devloper <span>& Designer</span></h5>
-          <p>
-            I'am a front-end web developer. I can provide clean code and pixel
-            perfect design. I also make the wesite more & more interactive with
-            web animations. A responsive design makes your website accessible to
-            all users, regardless of their devices and very easy to use. My interests are in Front End Engineering, 
-			and I love to create beautiful and performant products with delightful user experiences.
-          </p>
-          <button type="button">Lets talk</button>
+      <div class="heading">
+        <h2>About Me</h2>
+        <h5>Web Devloper <span>& Designer</span></h5>
+        <div class="pic">
+          <img src="./assets/main.jpeg" alt="" />
+          <div class="main">
+            <p>
+              I'am a front-end web developer. I can provide clean code and pixel
+              perfect design. I also make the wesite more & more interactive
+              with web animations. A responsive design makes your website
+              accessible to all users, regardless of their devices and very easy
+              to use. My interests are in Front End Engineering, and i love to
+              create beautiful and performant products with delightful user
+              experiences.
+            </p>
+          </div>
         </div>
       </div>
+      <button type="button">Lets talk</button>
     </section>
+    <hr />
 
-    <!-- service section down -------------------------------->
+    <!-- service section down -----------text--------------------->
     <div class="service">
       <div class="title">
         <h2>My Services</h2>
       </div>
       <div class="box">
         <div class="card">
-			<i class="ri-html5-line"></i>
+          <i class="ri-html5-line"></i>
           <h5>HTML/CSS Design</h5>
           <div class="pra">
             <p>
@@ -86,11 +97,11 @@
           </div>
         </div>
         <div class="card">
-			<i class="ri-crop-line"></i>
+          <i class="ri-crop-line"></i>
           <h5>UI/UX Design</h5>
           <div class="pra">
             <p>
-			  Every website should be build two primary goals: Firstly, it needs
+              Every website should be build two primary goals: Firstly, it needs
               to work across all devices. Secondly, it needs to be fastest as
               possible
             </p>
@@ -100,7 +111,7 @@
           </div>
         </div>
         <div class="card">
-			<i class="ri-code-s-slash-fill"></i>
+          <i class="ri-code-s-slash-fill"></i>
           <h5>JAVASCRIPT</h5>
           <div class="pra">
             <p>
@@ -113,8 +124,36 @@
             </p>
           </div>
         </div>
-		<div class="card">
-			<i class="ri-reactjs-line"></i>
+        <div class="card">
+          <i class="ri-reactjs-line"></i>
+          <h5>REACTJS</h5>
+          <div class="pra">
+            <p>
+              Every website should be build two primary goals: Firstly, it needs
+              to work across all devices. Secondly, it needs to be fastest as
+              possible
+            </p>
+            <p style="text-align: center">
+              <a class="button" href="#">Read More</a>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="ri-reactjs-line"></i>
+          <h5>REACTJS</h5>
+          <div class="pra">
+            <p>
+              Every website should be build two primary goals: Firstly, it needs
+              to work across all devices. Secondly, it needs to be fastest as
+              possible
+            </p>
+            <p style="text-align: center">
+              <a class="button" href="#">Read More</a>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="ri-reactjs-line"></i>
           <h5>REACTJS</h5>
           <div class="pra">
             <p>
@@ -129,24 +168,32 @@
         </div>
       </div>
     </div>
+    <hr />
 
     <!-- contect me -->
     <div class="contect-me">
       <p>Let Me Get You A Beautiful Website</p>
       <a class="new-button" href="#">Hire Me</a>
     </div>
+    <hr />
 
     <!-- --------------Footer Start----------- -->
     <footer>
       <p>Rohit Singh</p>
-      <p>For more HTML, CSS, JAVASCRIPT and REACTJS responsive website, please hire me.</p>
+      <p>
+        For more HTML, CSS, JAVASCRIPT and REACTJS responsive website, please
+        hire me.
+      </p>
       <div class="social">
         <a href="#"><i class="ri-facebook-circle-fill"></i></a>
         <a href="#"><i class="ri-instagram-line"></i></a>
         <a href="#"><i class="ri-linkedin-fill"></i></a>
-		<a href="#"><i class="ri-mail-line"></i></a>
+        <a href="#"><i class="ri-mail-line"></i></a>
       </div>
-      <p class="end">CopyRight © By Rohit Singh, All Right Reserved</p>
+      <p class="end">
+        CopyRight <i class="ri-copyright-line"></i> By Rohit Singh, All Right
+        Reserved
+      </p>
     </footer>
     <script src="./script.js"></script>
   </body>
