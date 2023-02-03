@@ -20,20 +20,24 @@
     />
   </head>
   <body>
-    <div class="hero">
-      <nav>
-        <h2 class="logo">Portfo<span>lio</span></h2>
+    <div id="home">
+    <header>
+        <a class="logo">Portfo<span>lio</span></a>
         <ul id="sidemenu">
-          <li><a href="#home">Home</a></li>
+          <li class="active"><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contect">Contect Us</a></li>
-          <i class="xxl ri-close-line" onclick="closemenu()"></i>
+          <i class="close" onclick="closemenu()">&times</i>
         </ul>
-        <i class="xxl ri-menu-2-line" onclick="openmenu()"></i>
-        <a href="#" class="btn">Hire Me</a>
-      </nav>
+         <div>
+          <i class="open" onclick="openmenu()">&#9776</i>
+         </div>
+      </header>
+      <section class="banner">
+      </section>
+    </div>
       <div class="content">
         <h4>Hello, my name is</h4>
         <h1>Rohit <span>Singh</span></h1>
@@ -50,10 +54,9 @@
           </form>
         </div>
       </div>
-    </div>
     <hr />
     <!-- about section down  -->
-    <section class="about">
+    <section id="about" class="about">
       <div class="heading">
         <h2>About Me</h2>
         <h5>Web Devloper <span>& Designer</span></h5>
@@ -72,129 +75,221 @@
           </div>
         </div>
       </div>
-      <button type="button">Lets talk</button>
+      <a type="button" href="https://wa.me/+917895831205" target="_blank"> Lets talk</a>
     </section>
     <hr />
 
     <!-- service section down -----------text--------------------->
-    <div class="service">
+    <div id="services" class="service">
       <div class="title">
         <h2>My Services</h2>
       </div>
       <div class="box">
         <div class="card">
           <i class="ri-html5-line"></i>
-          <h5>HTML/CSS Design</h5>
           <div class="pra">
+            <h5>HTML/CSS Design</h5>
             <p>
               Every website should be build two primary goals: Firstly, it needs
               to work across all devices. Secondly, it needs to be fastest as
-              possible
-            </p>
-            <p style="text-align: center">
-              <a class="button" href="#">Read More</a>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <i class="ri-crop-line"></i>
-          <h5>UI/UX Design</h5>
-          <div class="pra">
-            <p>
-              Every website should be build two primary goals: Firstly, it needs
-              to work across all devices. Secondly, it needs to be fastest as
-              possible
-            </p>
-            <p style="text-align: center">
-              <a class="button" href="#">Read More</a>
+              possible.HTML and CSS are the foundational skills required for most 
+              jobs in the tech sector. These are pretty basic and each job description 
+              of a front end developer will have these as a requirement. HTML and CSS are 
+              like the ABCs of front end development, necessary to learn the language of 
+              website development.
+              HyperText Markup Language (HTML) is the standard markup language which is 
+              used to create web pages. For website development, HTML is a critical skill. 
+              Therefore, it is a basic requirement for a front end developer.
+              CSS (Cascading Style Sheets) is the language used to make a digital document 
+              alive and communicable. A web page is created with HTML first and then CSS is 
+              used to put elements such as layout, format, colour, fonts etc on the page. It 
+              makes the web page interactive and presentable. you create with HTML.
+              Both HTML and CSS are definitely the skills no front end developer can do without!
             </p>
           </div>
+          <a class="button"></a>
         </div>
         <div class="card">
           <i class="ri-code-s-slash-fill"></i>
-          <h5>JAVASCRIPT</h5>
           <div class="pra">
+            <h5>JAVASCRIPT</h5>
             <p>
-              Every website should be build two primary goals: Firstly, it needs
-              to work across all devices. Secondly, it needs to be fastest as
-              possible
-            </p>
-            <p style="text-align: center">
-              <a class="button" href="#">Read More</a>
+              Another must-have skill for any front end developer is JavaScript (JS). 
+              Where HTML is a markup language and CSS enhances the web page, Javascript 
+              is a programming language that makes the website functional.
+              HTML and CSS are used to make websites that look fairly simple but most 
+              websites today are expected to have enhanced interactive features such 
+              as audio, video, animations etc. In such cases, Javascript comes in handy.              
             </p>
           </div>
+          <a class="button"></a>
         </div>
         <div class="card">
           <i class="ri-reactjs-line"></i>
-          <h5>REACTJS</h5>
           <div class="pra">
+            <h5>REACTJS</h5>
             <p>
-              Every website should be build two primary goals: Firstly, it needs
-              to work across all devices. Secondly, it needs to be fastest as
-              possible
-            </p>
-            <p style="text-align: center">
-              <a class="button" href="#">Read More</a>
+              React is a declarative, efficient, and flexible JavaScript library for 
+              building user interfaces. ReactJS is an open-source, component-based 
+              front-end library responsible only for the view layer of the application. 
+              React is used to create modular user interfaces. It promotes the 
+              development of reusable UI components that display dynamic data.
+              React uses a declarative paradigm, react application aims to be both 
+              efficient and flexible. It designs simple views for each state in 
+              your application, and React will efficiently update and render just the 
+              right component when your data changes. The declarative view makes your 
+              code more predictable and easier to debug. A React application is made 
+              of multiple components, each responsible for rendering a small, reusable 
+              piece of HTML. Components can be nested within other components to allow 
+              complex applications to be built out of simple building blocks. A 
+              component may also maintain an internal state – for example, a TabList 
+              component may store a variable corresponding to the currently open tab.
+              Let us understand this with a practical example:
+              Let’s say one of your friends posted a photograph on Facebook. Now you 
+              go and like the image and then you started checking out the comments too. 
+              Now while you are browsing over comments you see that the likes count 
+              has increased by 100, since you liked the picture, even without 
+              reloading the page. This magical count change is because of ReactJS
             </p>
           </div>
+          <a class="button"></a>
         </div>
-        <div class="card">
-          <i class="ri-reactjs-line"></i>
-          <h5>REACTJS</h5>
-          <div class="pra">
-            <p>
-              Every website should be build two primary goals: Firstly, it needs
-              to work across all devices. Secondly, it needs to be fastest as
-              possible
-            </p>
-            <p style="text-align: center">
-              <a class="button" href="#">Read More</a>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <i class="ri-reactjs-line"></i>
-          <h5>REACTJS</h5>
-          <div class="pra">
-            <p>
-              Every website should be build two primary goals: Firstly, it needs
-              to work across all devices. Secondly, it needs to be fastest as
-              possible
-            </p>
-            <p style="text-align: center">
-              <a class="button" href="#">Read More</a>
-            </p>
-          </div>
-        </div>
+        
       </div>
     </div>
     <hr />
 
-    <!-- contect me -->
+    <!-- ______skills_______ -->
+    <div id="skills" class="skills">
+      <h1>My Skills</h1>
+      <div class="mykills">
+        <div class="personal">
+          <h2>01. HTML/CSS</h2>
+          <p>HyperText Markup Language (HTML) is the standard markup language which 
+          is used to create web pages. For website development, HTML is a critical
+          skill. Therefore, it is a basic requirement for a front end developer.
+          CSS (Cascading Style Sheets) is the language used to make a digital 
+          document alive and communicable. A web page is created with HTML first 
+          and then CSS is used to put elements such as layout, format, colour, 
+          fonts etc on the page. It makes the web page interactive and presentable. 
+          you create with HTML.</p>
+        </div>
+        <div class="notpersonal">
+          <h2>02. RESPONSIVE DESIGN</h2>
+          <p>Today, websites are not simply viewed on desktops but across other devices, 
+          such as tablets, phones etc. A good website is one that offers suitable 
+          viewing experience across all devices. This is essentially a responsive 
+          website. Another must-have skill for any front end developer is to be able 
+          to create websites that are responsive using design elements as well as 
+          coding.</p>
+        </div>
+        <div class="personal">
+          <h2>03. CSS PREPROCESSING</h2>
+          <p>CSS as a stand alone skill may not be as beneficial for career growth and 
+          for attaining versatility in your portfolio. One of the drawbacks of only
+          using CSS is that you can’t define variables, functions, or perform 
+          arithmetic operations.
+          When a project grows or becomes more complex, using just CSS may become 
+          redundant and repetitive as codes will have to be written every time, 
+          which is time-consuming. CSS Preprocessing takes care of this limitation 
+          and any smart front end developer would definitely want this skill in 
+          his/her toolkit.</p>
+        </div>
+        <div class="notpersonal">
+          <h2>04. JAVASCRIPT</h2>
+          <p>Another must-have skill for any front end developer is JavaScript (JS). 
+          Where HTML is a markup language and CSS enhances the web page, Javascript 
+          is a programming language that makes the website functional.
+          HTML and CSS are used to make websites that look fairly simple but most 
+          websites today are expected to have enhanced interactive features such as 
+          audio, video, animations etc. In such cases, Javascript comes in handy.          
+          </p>
+        </div>
+        <div class="personal">
+          <h2>05. CSS AND JAVASCRIPT FRAMEWORKS</h2>
+          <p>While we have talked about CSS and Javascript, their frameworks can be 
+            considered an upskill from that. These frameworks are bundles of CSS or 
+            JS files that provide added functionality to a website.
+            A good front end developer needs to gauge the pros and cons of the 
+            frameworks being considered for instance some frameworks help make 
+            searching content easier while some are good at displaying content more 
+            effectively. Whatever be the case, to excel at front end development, 
+            knowledge of these frameworks is a must.</p>
+        </div>
+        <div class="notpersonal">
+          <h2>04. VERSION CONTROL/GIT</h2>
+          <p>This is an important time-saving skill and also helps a front end 
+            developer deliver a customised product. Throughout the project development, 
+            many unforeseen changes or errors might come along. Version control helps 
+            in fixing the errors or making the necessary changes without having to 
+            start over from scratch.
+            Though it doesn’t need to be made explicitly clear this is a critically 
+            helpful skill to have for any front end developer.
+          </p>
+        </div>
+        <div class="personal">
+          <h2>05. TESTING/DEBUGGING</h2>
+          <p>A very important aspect of website development is to make sure that the 
+            end result is error-free, free of bugs and seamless experience for the user. 
+            Therefore, the ability to test and debug a website is another essential 
+            skill set any front end developer needs to have. There are various methodologies 
+            that can enable the front end developer to make sure that the website or product 
+            not only looks good but also functions smoothly.</p>
+        </div>
+        <div class="notpersonal">
+          <h2>06. WEB PERFORMANCE</h2>
+          <p>By now, you must have understood that HTML, CSS and Javascript are the foundational 
+            skills required by all front end developers. The other skills that have been 
+            listed are basically required to make sure that the website or product you are 
+            building is efficient, error-free, interactive and easy to use. Web performance 
+            is a skillset that makes sure that the user experience is excellent. It is basically
+            the loading time of your website. Naturally, if it is too slow, the users won’t 
+            be happy with the experience. As front end developers, you would be expected 
+            to have knowledge of how to use building and automation tools that enhance web performance.
+          </p>
+        </div>
+        <div class="personal">
+          <h2>07. REACT.JS</h2>
+          <p>Being a part of the JavaScript language, using React spawns lots of advantages. 
+            Products built with React are simple to scale, a single language used on the 
+            server/client/mobile side of things grants outstanding productivity, there are 
+            workflow patterns for convenient teamwork, UI code is readable and maintainable, 
+            and more. World-leading companies have used React and other JS technologies in 
+            some of the top market-defining products out there (Instagram, Reddit, and 
+            Facebook being the most vivid examples).</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <!-- download cv -->
     <div class="contect-me">
       <p>Let Me Get You A Beautiful Website</p>
-      <a class="new-button" href="#">Hire Me</a>
+      <a class="new-button">Hire Me</a>
     </div>
     <hr />
 
     <!-- --------------Footer Start----------- -->
-    <footer>
+    <footer id="contect">
       <p>Rohit Singh</p>
       <p>
         For more HTML, CSS, JAVASCRIPT and REACTJS responsive website, please
         hire me.
       </p>
       <div class="social">
-        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-        <a href="#"><i class="ri-instagram-line"></i></a>
-        <a href="#"><i class="ri-linkedin-fill"></i></a>
-        <a href="#"><i class="ri-mail-line"></i></a>
+        <a href="https://twitter.com/@rohitsingh_50" target="_blank"><i class="ri-twitter-fill"></i></a>
+        <a href="https://facebook.com/rohit.singh.131" target="_blank"><i class="ri-facebook-circle-fill"></i></a>
+        <a href="https://instagram.com/rohit_singh.131" target="_blank"><i class="ri-instagram-line"></i></a>
+        <a href="https://linkedin.com/in/rohit-singh-370506263" target="_blank"><i class="ri-linkedin-fill"></i></a>
+        <a href="mailto:r.singh789583@gamil.com" target="_blank"><i class="ri-mail-line"></i></a>
+        <a href="https://github.com/rohitSingh131" target="_blank"><i class="ri-github-fill"></i></a>
       </div>
       <p class="end">
         CopyRight <i class="ri-copyright-line"></i> By Rohit Singh, All Right
         Reserved
       </p>
     </footer>
+
     <script src="./script.js"></script>
   </body>
 </html>

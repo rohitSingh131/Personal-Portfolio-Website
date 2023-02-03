@@ -7,45 +7,90 @@
 html {
   scroll-behavior: smooth;
 }
-.hero {
+body {
   height: 100vh;
   width: 100%;
   background-image: url(./assets/nbg.jpeg);
   background-size: cover;
-  background-position:left;
+  background-position: left;
 }
-nav {
+header {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 45px;
-  padding-left: 8%;
-  padding-right: 8%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.6s;
+  padding: 40px 100px;
+  z-index: 100000;
 }
-.logo {
+header.sticky {
+  padding: 5px 100px;
+  background: #fff;
+}
+header.sticky .logo,
+header.sticky ul li a {
+  color: #000;
+}
+header .logo {
+  position: relative;
+  font-weight: 700;
   color: white;
-  font-size: 35px;
-  letter-spacing: 1px;
+  font-size: 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   cursor: pointer;
+  transition: 0.6s;
 }
 span {
   color: #f9004d;
 }
-nav ul li {
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  left: 20%;
   list-style-type: none;
-  display: inline-block;
-  margin-left: 13px;  
-  padding: 1px 12px;
+  position: relative;
 }
-nav ul li a {
-  color: white;
+header ul li a {
+  position: relative;
+  margin: 0 15px;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.6s;
 }
-nav ul li a:hover {
-  color: #f9004d;
+header ul li a:hover {
+  color: #000;
   transition: 0.4s;
+  background: #f9004d;
+  border-radius: 28px 0px;
+  padding: 7px 15px;
+}
+header ul li.active {
+  color: #000;
+  background-color: #f9004d;
+  border-radius: 28px 0px;
+  padding: 7px 15px;
+}
+header i.open {
+  color: #fff;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./assets/nbg.jpeg);
+  background-size: cover;
+  overflow: hidden;
 }
 .btn {
   background-color: #f9004d;
@@ -61,7 +106,7 @@ nav ul li a:hover {
   transform: scale(1.2);
 }
 
-/* ____________Nav Content________ */
+/* ____________header Content________ */
 .content {
   position: absolute;
   top: 60%;
@@ -150,9 +195,10 @@ h4 {
   font-size: 18px;
   margin-bottom: 45px;
 }
-button {
+.about a {
   background-color: #f9004d;
   color: white;
+  text-align: center;
   text-decoration: none;
   border: 2px solid transparent;
   font-weight: bold;
@@ -162,7 +208,7 @@ button {
   text-transform: uppercase;
   transition: 0.4s;
 }
-button:hover {
+.about a:hover {
   background-color: transparent;
   border: 2px solid #f9004d;
   cursor: pointer;
@@ -188,12 +234,11 @@ button:hover {
   min-height: 400px;
 }
 .card {
-  height: 365px;
   width: 335px;
-  padding: 20px 35px;
+  padding: 20px;
   background: #191919;
   border-radius: 20px;
-  margin: 15px;
+  margin: 10px;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -205,32 +250,124 @@ button:hover {
   margin: 20px 0px;
   color: #f9004d;
 }
-h5 {
+.card h5 {
   color: white;
   font-size: 23px;
   margin-bottom: 15px;
 }
 .pra p {
+  position: relative;
+  height: 215px;
+  overflow: hidden;
   color: #fcfc;
   font-size: 16px;
+  text-align: justify;
   line-height: 27px;
   margin-bottom: 25px;
 }
+.card .pra p::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(transparent, #191919);
+}
 .card .button {
+  text-transform: uppercase;
   background-color: #f9004d;
   color: white;
   text-decoration: none;
-  border: 2px solid transparent;
+  border: 1px transparent;
   font-weight: bold;
-  padding: 13px 30px;
-  border-radius: 30px;
+  padding: 10px 11px;
+  border-radius: 4px;
   transition: 0.4s;
+}
+.card.active .pra p {
+  height: auto;
+}
+.card.active .pra p::before {
+  display: none;
+}
+.card .button::before {
+  content: "Read More";
 }
 .card .button:hover {
   background-color: transparent;
   border: 2px solid #f9004d;
   cursor: pointer;
 }
+.card.active .button::before {
+  content: "Read Less";
+}
+
+/* ___________Skills_______ */
+.skills {
+  overflow: hidden;
+  padding: 12px;
+  width: 100%;
+  background: #101010;
+}
+.skills h1 {
+  margin-top: 60px;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  background: #101010;
+}
+.myskills {
+  height: 251px;
+  width: 335px;
+}
+.personal {
+  border-radius: 6px;
+  float: left;
+  background: #191919;
+  padding: 12px;
+  margin: 0px 0px 0px 50px;
+  height: auto;
+  width: 80%;
+}
+.notpersonal {
+  border-radius: 6px;
+  float: right;
+  background: #191919;
+  padding: 12px;
+  margin: 50px;
+  height: auto;
+  width: 80%;
+}
+.personal:hover,
+.notpersonal:hover {
+  width: calc(90% - 20px);
+  height: calc(100% - 20px);
+  background: linear-gradient(
+    to bottom,
+    rgba(199, 0, 57, 0.01) 0,
+    rgba(199, 0, 57, 0.25) 25%,
+    rgba(199, 0, 57, 0.75) 75%,
+    rgba(199, 0, 57, 0.95) 100%
+  );
+  transition: 1s;
+}
+.notpersonal h2,
+.personal h2 {
+  padding: 12px;
+  margin-top: 5px;
+  color: #fff;
+}
+.notpersonal p,
+.personal p {
+  line-height: 22px;
+  padding: 2px;
+  margin-top: 4px;
+  color: #fcfc;
+}
+
+/* __________contect_______ */
+
 .contect-me {
   width: 100%;
   height: 290px;
@@ -261,6 +398,8 @@ h5 {
   border: 2px solid #f9004d;
   cursor: pointer;
 }
+
+/* ___________footer_____________ */
 footer {
   position: relative;
   width: 100%;
@@ -311,78 +450,76 @@ footer p:nth-child(2) {
   font-size: 14px;
 }
 
-/* ______________responsive 786______________ */
-nav ul .xxl {
+/* ______________responsive 925______________ */
+
+header i {
   display: none;
 }
 
-@media screen and (max-width: 925px){
-  .hero {
+@media screen and (max-width: 925px) {
+  .banner {
     background-image: url(./assets/tabbg.jpeg);
   }
-   nav ul .xxl {
+  header {
+    padding: 30px 100px;
+  }
+  header ul i.close,
+  i.open {
     display: block;
     font-size: 25px;
   }
-  nav .xxl {
-	color: white;
+  header.sticky i.open {
+    color: #000;
   }
-  nav ul {
+  header ul {
     top: 0;
+    align-content: space-between;
+    flex-direction: column;
     right: -200px;
     position: fixed;
-    background: #f9004d;
-    text-align: center;
+    background: #858585;
+    justify-content: center;
     width: 200px;
-    height: 100vh;
-    padding: 50px;
-    z-index: 2;
+    height: 70vh;
+    border-bottom-left-radius: 111px;
+    padding: 10px;
+    transition: 1s;
   }
-  nav ul li {
+  header ul li {
     display: block;
+    left: 4%;
     margin: 10px;
   }
-  nav ul .xxl {
+  header ul i.close {
+    padding: 1px;
+    background-color: transparent;
+    color: #000;
+    font-size: 4.5em;
     position: absolute;
-    top: 25px;
-    right: 15px;
-    cursor: pointer;
+    top: 13px;
+    right: 19px;
   }
-
+  header.sticky ul li {
+    color: #000;
+  }
+  header.sticky ul li .close {
+    color: #000;
+    background: #000;
+  }
+  i.open {
+    background-color: transparent;
+    padding: 12px;
+  }
 }
 
 @media screen and (max-width: 786px) {
-  .hero {
+  .banner {
     background-image: url(./assets/tabbg.jpeg);
   }
-  /* _______nav menu________786_____ */
-  nav ul .xxl {
-    display: block;
-    font-size: 25px;
-  }
-  nav .xxl {
-	color: white;
-  }
-  nav ul {
-    top: 0;
-    right: -200px;
-    background: #f9004d;
-    position: fixed;
-    text-align: center;
-    width: 200px;
-    height: 100vh;
-    padding: 50px;
-    z-index: 2;
-  }
-  nav ul li {
-    display: block;
-    margin: 10px;
-  }
-  nav ul .xxl {
-    position: absolute;
-    top: 25px;
-    right: 15px;
-    cursor: pointer;
+  /* _______header menu________786_____ */
+
+  header {
+    padding: 30px 70px;
   }
 
   /* __________content menu_______786______ */
@@ -431,7 +568,7 @@ nav ul .xxl {
     padding: 4%;
     font-size: 24px;
   }
-  button {
+  .about a {
     width: 90%;
     margin: 4%;
     text-transform: uppercase;
@@ -459,10 +596,15 @@ nav ul .xxl {
 }
 
 @media screen and (max-width: 482px) {
-  .hero {
+  .banner {
     background-image: url(./assets/phonebg.jpeg);
   }
-  
+  header {
+    padding: 30px 60px;
+  }
+  header.sticky {
+    padding: 1px 60px;
+  }
   /* __________content menu_______482______ */
   .content {
     background-color: rgba(2, 9, 9, 0.6);
@@ -478,10 +620,10 @@ nav ul .xxl {
   }
   .content h3 {
     font-size: 1.3em;
-	margin-bottom: 20px;
+    margin-bottom: 20px;
   }
   .content h4 {
-    font-size: 1.0em;
+    font-size: 1em;
   }
 
   /* _______Res about menu______ */
@@ -512,7 +654,7 @@ nav ul .xxl {
     text-align: justify;
     font-size: 20px;
   }
-  button {
+  .about a {
     width: 96%;
     margin: 2%;
     text-transform: uppercase;
